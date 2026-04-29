@@ -76,7 +76,7 @@ export default function Sell() {
                 <SelectContent>
                   {Object.values(CROPS).map((c) => (
                     <SelectItem key={c.id} value={c.id}>
-                      {c.emoji} {c.name} â€” sold by {c.unit}
+                      {c.emoji} {c.name} sold by {c.unit}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -124,7 +124,7 @@ export default function Sell() {
               <Input
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                placeholder="+2547â€¦"
+                placeholder="+2547"
                 className="mt-1.5"
               />
             </div>
@@ -139,7 +139,6 @@ export default function Sell() {
         <TabsContent value="mine">
           {myListings.length === 0 ? (
             <div className="rounded-2xl border border-dashed border-border p-12 text-center">
-              <p className="text-2xl mb-2">ðŸ“¦</p>
               <p className="font-semibold">You have no listings yet</p>
               <p className="text-sm text-muted-foreground mt-1">Switch to Create Listing to post your produce.</p>
             </div>
@@ -152,10 +151,10 @@ export default function Sell() {
                     <img src={c.image} alt="" className="h-14 w-14 rounded-xl object-cover" />
                     <div className="flex-1 min-w-0">
                       <p className="font-bold">
-                        {c.name} <span className="text-xs font-normal text-muted-foreground">Â· {l.quantity} Ã— {l.unitLabel}</span>
+                        {c.name} <span className="text-xs font-normal text-muted-foreground"> {l.quantity}  {l.unitLabel}</span>
                       </p>
                       <p className="text-sm text-muted-foreground">
-                        KES {l.pricePerUnit.toLocaleString()} Â· {l.county} Â· {formatRelativeTime(l.createdAt)}
+                        KES {l.pricePerUnit.toLocaleString()}  {l.county}  {formatRelativeTime(l.createdAt)}
                       </p>
                     </div>
                     <span

@@ -7,7 +7,7 @@ import {
   CalendarDays,
   ListOrdered,
   MessageCircle,
-  BookOpen,
+  Users,
   Leaf,
 } from "lucide-react";
 import promo from "@/assets/promo-seedling.jpg";
@@ -20,7 +20,7 @@ const items = [
   { to: "/farm-plan", label: "My Farm Plan", icon: CalendarDays },
   { to: "/sell", label: "My Listings", icon: ListOrdered },
   { to: "/orders", label: "Orders", icon: MessageCircle },
-  { to: "/learn", label: "Learn & Resources", icon: BookOpen },
+  { to: "/groups", label: "Group Selling", icon: Users, badge: "New" },
 ] as const;
 
 export function AppSidebar() {
@@ -73,10 +73,10 @@ export function AppSidebar() {
           loading="lazy"
         />
         <Link
-          to="/learn"
+          to="/"
           className="inline-flex items-center gap-1 rounded-md bg-sidebar-primary px-3 py-1.5 text-xs font-semibold text-sidebar-primary-foreground hover:opacity-90"
         >
-          Learn More →
+          View in Dashboard →
         </Link>
       </div>
     </aside>
